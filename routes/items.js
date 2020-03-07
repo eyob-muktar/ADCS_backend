@@ -1,6 +1,7 @@
 const express = require('express');
 const router = new express.Router();
 
+const validateObjectId = require('../middleware/validateObjectId');
 const Item = require('../models/items');
 const auth = require('../middleware/auth');
 const admin = require('../middleware/admin');
