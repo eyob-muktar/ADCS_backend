@@ -1,23 +1,13 @@
-const config = require('config');
 const express = require('express');
-
-require('./db/mongoose');
-const error = require('./middleware/error');
-const userRouter = require('./routes/users');
-const itemRouter = require('./routes/items');
-
 const app = express();
+
+require('./startup/logging')();
+require('./startup/route')(app);
+require('./startup/db')();
+require('./startup/config')();
+
+// eslint-disable-next-line no-undef
 const port = process.env.PORT || 3002;
+const server = app.listen(port, () => console.log(`Listening on port ${port}`));
 
-if (!config.get('jwtPrivateKey')) {
-    console.error('FATAL ERROR: jwtPrivateKey is not defined.');
-    process.exit(1);
-}
-
-app.use(express.json());
-app.use('/users', userRouter);
-app.use('/items', itemRouter);
-app.use(error);
-
-
-app.listen(port, () => console.log(`Listening on port ${port}`));
+module.exports = server;
