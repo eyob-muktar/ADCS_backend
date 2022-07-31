@@ -29,7 +29,7 @@
     "mongoose": "^5.8.10",
     "morgan": "^1.9.1",
     "node-esapi": "^0.0.1",
-    "rate-limiter-flexible": "^2.1.3",
+    "rate-limiter-flexible": "^2.3.7",
     "winston": "^3.2.1",
     "winston-mongodb": "^5.0.1"
   },
