@@ -1,4 +1,3 @@
-```markdown
 # ADCS_Server
 
 ## Overview
@@ -57,16 +56,3 @@ To run tests, use the following command:
 ```bash
 yarn test
 ```
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Contributing
-Contributions are welcome! Please fork the repository and create a pull request.
-
-## Contact
-For any inquiries, please reach out to [Your Email].
-
-```
-
-This template is a starting point, and you can modify it as needed based on the specifics of the project.
