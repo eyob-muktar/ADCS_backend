@@ -1,3 +1,8 @@
+const winston = require('winston');
+
+// eslint-disable-next-line no-unused-vars
 module.exports = function(err, req, res, next){
-    res.status(500).send('Something went wrong');
-}
+	winston.error(err.message, err);
+   
+	res.status(500).send('Something went wrong');
+};
